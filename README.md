@@ -52,3 +52,10 @@ sudo env LD_LIBRARY_PATH=/opt/ros/noetic/lib /media/jhuai/docker/vision/thermal_
 
 thermal_ros_node 4
 ```
+
+## Related code
+
+[1] [The C code for thermal cameras with x86_64 SDK libs](https://github.com/JzHuai0108/iray_c_demo)
+
+[2] [The C code for thermal cameras with arm64 SDK libs](https://github.com/LiuYuha0/thermal_SDK_arm64)
+
