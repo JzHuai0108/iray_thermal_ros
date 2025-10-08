@@ -24,10 +24,31 @@ rosrun thermal_ros thermal_ros_node 1 0
 xuan wang, 2024.06.13
 
 
-# successful commands
-## with two thermal cameras plugged in
-## ls /dev/video*
-## /dev/video0  /dev/video1  /dev/video2  /dev/video3 /dev/video4  /dev/video5
-sudo env LD_LIBRARY_PATH=/opt/ros/noetic/lib /media/jhuai/docker/vision/thermal_ros_ws/devel/lib/thermal_ros/thermal_ros_node 2
-sudo env LD_LIBRARY_PATH=/opt/ros/noetic/lib /media/jhuai/docker/vision/thermal_ros_ws/devel/lib/thermal_ros/thermal_ros_node 4
+## Find the cameras
 
+For instance, with two thermal cameras plugged in the computer, in a terminal, run
+```
+ls /dev/video*
+```
+
+YOu should see something like
+```
+/dev/video0  /dev/video1  /dev/video2  /dev/video3 /dev/video4  /dev/video5
+```
+
+## Build with ROS1
+```
+catkin build
+```
+
+## Access each camera with SDK
+
+```
+sudo env LD_LIBRARY_PATH=/opt/ros/noetic/lib /media/jhuai/docker/vision/thermal_ros_ws/devel/lib/thermal_ros/
+
+thermal_ros_node 2
+
+sudo env LD_LIBRARY_PATH=/opt/ros/noetic/lib /media/jhuai/docker/vision/thermal_ros_ws/devel/lib/thermal_ros/
+
+thermal_ros_node 4
+```
